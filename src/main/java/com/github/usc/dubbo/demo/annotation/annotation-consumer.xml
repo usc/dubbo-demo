@@ -19,16 +19,11 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
     http://code.alibabatech.com/schema/dubbo https://raw.githubusercontent.com/alibaba/dubbo/master/dubbo-config/dubbo-config-spring/src/main/resources/META-INF/dubbo.xsd">
 
-    <dubbo:application name="generic-generic" />
+    <dubbo:application name="annotation-consumer" />
 
     <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
     <dubbo:registry address="zookeeper://10.11.200.33:2181" />
 
-    <dubbo:protocol name="dubbo" port="-1" />
-
-    <bean id="userserviceimpl" class="com.github.usc.dubbo.demo.generic.impl.UserServiceImpl" />
-
-    <dubbo:service interface="com.github.usc.dubbo.demo.generic.api.IUserService" ref="userserviceimpl">
-    </dubbo:service>
+    <dubbo:annotation package="com.github.usc.dubbo.demo.annotation.action" />
 
 </beans>
