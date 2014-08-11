@@ -26,8 +26,10 @@ public class GenericProvider {
 
     public static void main(String[] args) throws Exception {
         String config = GenericProvider.class.getPackage().getName().replace('.', '/') + "/generic-provider.xml";
+        @SuppressWarnings("resource")
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(config);
         context.start();
+
         System.in.read();
     }
 

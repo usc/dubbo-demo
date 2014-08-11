@@ -33,11 +33,12 @@ public class GenericConsumer {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(config);
         context.start();
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100; i++) {
             IUserService userservice = (IUserService) context.getBean("userservice");
             User user = userservice.get(new Params("a=b"));
-            System.out.println(user);
+            System.out.println(i + ":" + user);
         }
-        System.in.read();
+
+        context.close();
     }
 }
