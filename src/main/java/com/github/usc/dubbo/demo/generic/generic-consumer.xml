@@ -21,8 +21,8 @@
 
     <dubbo:application name="generic-consumer" />
 
-    <!-- <dubbo:registry address="multicast://224.5.6.7:1234" /> -->
-    <dubbo:registry address="zookeeper://10.11.200.33:2181" />
+    <dubbo:registry address="multicast://224.5.6.7:1234" />
+<!--     <dubbo:registry address="zookeeper://10.11.200.33:2181" /> -->
 
     <dubbo:reference id="userservice" interface="com.github.usc.dubbo.demo.generic.api.IUserService" />
 
