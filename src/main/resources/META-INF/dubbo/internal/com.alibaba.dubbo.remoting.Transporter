@@ -1,0 +1,1 @@
+netty5=com.alibaba.dubbo.remoting.transport.netty5.Netty5Transporter
