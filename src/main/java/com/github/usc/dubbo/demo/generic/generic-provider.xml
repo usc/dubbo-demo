@@ -28,7 +28,7 @@
 
     <bean id="userserviceimpl" class="com.github.usc.dubbo.demo.generic.impl.UserServiceImpl" />
 
-    <dubbo:service id="test" interface="com.github.usc.dubbo.demo.generic.api.UserService" ref="userserviceimpl">
+    <dubbo:service id="test" interface="com.github.usc.dubbo.demo.generic.api.IUserService" ref="userserviceimpl">
     </dubbo:service>
 
 </beans>

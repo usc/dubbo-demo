@@ -25,6 +25,6 @@
     <dubbo:registry address="zookeeper://10.11.200.33:2181" />
     <dubbo:protocol server="mina" />
 
-    <dubbo:reference id="userservice" interface="com.github.usc.dubbo.demo.generic.api.UserService" />
+    <dubbo:reference id="userservice" interface="com.github.usc.dubbo.demo.generic.api.IUserService" />
 
 </beans>
